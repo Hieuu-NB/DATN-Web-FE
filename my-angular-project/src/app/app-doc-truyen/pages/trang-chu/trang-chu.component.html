@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang chủ - Đinh Minh Hiếu</title>
+    <style>
+        body{
+            margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+        }
+        html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+        /* Reset CSS */
+        html, body, div, span, applet, object, iframe,
+        h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+        a, abbr, acronym, address, big, cite, code,
+        del, dfn, em, img, ins, kbd, q, s, samp,
+        small, strike, strong, sub, sup, tt, var,
+        b, u, i, center,
+        dl, dt, dd, ol, ul, li,
+        fieldset, form, label, legend,
+        table, caption, tbody, tfoot, thead, tr, th, td,
+        article, aside, canvas, details, embed, 
+        figure, figcaption, footer, header, hgroup, 
+        menu, nav, output, ruby, section, summary,
+        time, mark, audio, video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+        }
+
+        /* HTML5 display-role reset for older browsers */
+        article, aside, details, figcaption, figure, 
+        footer, header, hgroup, menu, nav, section {
+            display: block;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1;
+        }
+
+        ol, ul {
+            list-style: none;
+        }
+
+        blockquote, q {
+            quotes: none;
+        }
+
+        blockquote:before, blockquote:after,
+        q:before, q:after {
+            content: '';
+            content: none;
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+
+        /* Custom Styles */
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .search-box {
+            flex: 1;
+            margin: 0 20px;
+        }
+
+        .search-box input[type="text"] {
+            width: 600px;
+            padding: 8px;
+            border-radius: 4px;
+            border: none;
+            font-size: 16px;
+            margin-left: 200px;
+        }
+
+        .user-info {
+            display: flex;
+            width: 220px;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .user-info input[type="text"] {
+            padding: 8px;
+            border-radius: 4px;
+            border: none;
+            font-size: 16px;
+            margin-right: 10px;
+        }
+
+        .user-info button {
+            padding: 8px 12px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .user-info button:hover {
+            background-color: #0056b3;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            overflow: hidden;
+            margin-top: 40px;
+        }
+
+        .comic {
+            margin: 10px;
+            width: 200px;
+            transition: transform 1s;
+        }
+        .comic :hover{
+            transform: scale(0.8); 
+            transform-origin: center center;
+        }
+        .comic img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Đinh Minh Hiếu</div>
+        <div class="search-box">
+            <input type="text" placeholder="Tìm kiếm...">
+        </div>
+        <div class="user-info">
+            <h3>Xin chào Hiếu </h3>
+            <button type="submit"><a href="login">Đăng xuất</a></button>
+        </div>
+    </header>
+    
+    <div class="container">
+        
+        <div class="comic" *ngFor="let imageUrl of imageUrls">
+            <img [src]="imageUrl" alt="Ảnh">
+        </div>
+    </div>
+</body>
+
+<footer class="footer">
+    <div class="container">
+      <div class="footer-sections">
+        <div class="section about">
+          <h2>Về Chúng Tôi</h2>
+          <p>Mang lại cho bạn những trải nghiệm đọc truyện tuyệt vời nhất.</p>
+        </div>
+        <div class="section contact">
+          <h2>Liên Hệ</h2>
+          <ul>
+            <li>Email: contact.com</li>
+            <li>Điện thoại: 0123-456-789</li>
+            <li>Địa chỉ: Số 123, Đường ABC, Thành phố XYZ</li>
+          </ul>
+        </div>
+        <div class="section links">
+          <h2>Liên Kết</h2>
+          <ul>
+            <li><a href="#">Trang chủ</a></li>
+            <li><a href="#">Truyện mới</a></li>
+            <li><a href="#">Truyện nổi bật</a></li>
+            <li><a href="#">Danh mục</a></li>
+            <li><a href="#">Liên hệ</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+</html>

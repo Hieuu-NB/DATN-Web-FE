@@ -1,0 +1,48 @@
+.footer {
+    background-color: #212529; /* Màu nền footer */
+    padding: 50px 0;
+    background-image: url('https://thibanglai.edu.vn/hinh-anh-dep-ve-sach/imager_19050.jpg'); /* Hình nền có hình mờ */
+    background-size: cover;
+    background-blur: 10px; /* Độ mờ của hình nền */
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    color: #fff; /* Màu chữ */
+  }
+  
+  .footer-sections {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .section {
+    width: 30%;
+  }
+  
+  .section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .section p, .section ul {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .section ul li {
+    list-style: none;
+    margin-bottom: 10px;
+  }
+  
+  .section ul li a {
+    color: #fff; /* Màu chữ liên kết */
+    text-decoration: none;
+  }
+  
+  .section ul li a:hover {
+    color: #007bff;
+  }
+  
