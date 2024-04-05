@@ -43,7 +43,19 @@ ol, ul {
             font: inherit;
             vertical-align: baseline;
         }
-
+        .search-button {
+            margin-left: 20px;
+            padding: 6px 12px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .search-button:hover {
+            background-color: #45a049;
+        }
         /* HTML5 display-role reset for older browsers */
         article, aside, details, figcaption, figure, 
         footer, header, hgroup, menu, nav, section {
@@ -145,7 +157,7 @@ ol, ul {
             transition: transform 1s;
         }
         .comic :hover{
-            transform: scale(0.8); 
+            transform: scale(0.95); 
             transform-origin: center center;
         }
         .comic img {
@@ -157,9 +169,10 @@ ol, ul {
 <body>
     <header>
         <div class="logo">Đinh Minh Hiếu</div>
-        <div class="search-box">
-            <input type="text" placeholder="Tìm kiếm...">
-        </div>
+        <form [formGroup]="searchForm" class="search-box">
+            <input (input)="onInputChange($event)" formControlName="text" type="text" placeholder="Tìm kiếm...">
+            <button (click)="search()" class="search-button">Search</button>
+        </form>
         <div class="user-info">
             <h3>Xin chào Hiếu </h3>
             <button type="submit"><a href="login">Đăng xuất</a></button>
@@ -168,8 +181,9 @@ ol, ul {
     
     <div class="container">
         
-        <div class="comic" *ngFor="let imageUrl of imageUrls">
-            <img [src]="imageUrl" alt="Ảnh">
+        <div class="comic" *ngFor="let imageUrl of data">
+            <img (click)="onRecordClick(imageUrl)" [src]="imageUrl.linkAnh" alt="Ảnh">
+            <div style="color: red;">{{imageUrl.tenTruyen}}</div>
         </div>
     </div>
 </body>
@@ -202,5 +216,4 @@ ol, ul {
       </div>
     </div>
   </footer>
-  
 </html>

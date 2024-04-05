@@ -1,27 +1,25 @@
 import { RouterModule, Routes } from "@angular/router";
-import { TrangChuComponent } from "./trang-chu.component";
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { BrowserModule } from "@angular/platform-browser";
-import { FormsModule, ReactiveFormsModule } from "@angular/forms";
-import { TrangTruyenComponent } from "../trang-truyen/trang-truyen.component";
+import { TrangTruyenComponent } from "./trang-truyen.component";
 
 const routes: Routes = [
     {
-      path: '', component: TrangChuComponent,
+      path: '', component: TrangTruyenComponent,
     }
   ];
   
   @NgModule({
     declarations: [
-        // TrangChuComponent
+        TrangTruyenComponent
     ],
     imports: [
       CommonModule,
-      FormsModule,
-      ReactiveFormsModule,
+      // BrowserModule, 
       RouterModule.forChild(routes)
     ],
+    //providers: [OverlayService]
   })
-  export class TrangChuModule { }
+  export class TrangTruyenModule { }
   

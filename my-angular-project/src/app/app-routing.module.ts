@@ -6,13 +6,20 @@ import { LoginComponent } from './app-doc-truyen/pages/login/login.component';
 
 const routes: Routes = [
   { path: '', component: LoginComponent },
-  // { path: 'trang-chu', component: TrangChuComponent },
+  { path: 'trang-chu', component: TrangChuComponent },
   { path: 'login', component: LoginComponent },
+  // {
+  //   path: 'trang-chu',
+  //   loadChildren: () =>
+  //     import('./app-doc-truyen/pages/trang-chu/trang-chu.module').then(
+  //       (m) => m.TrangChuModule
+  //     ),
+  // },
   {
-    path: 'trang-chu',
+    path: 'trang-truyen',
     loadChildren: () =>
-      import('./app-doc-truyen/pages/trang-chu/trang-chu.module').then(
-        (m) => m.TrangChuModule
+      import('./app-doc-truyen/pages/trang-truyen/trang-truyen.module').then(
+        (m) => m.TrangTruyenModule
       ),
   },
 ];
