@@ -3,6 +3,7 @@ import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { BrowserModule } from "@angular/platform-browser";
 import { TrangTruyenComponent } from "./trang-truyen.component";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
 const routes: Routes = [
     {
@@ -12,10 +13,12 @@ const routes: Routes = [
   
   @NgModule({
     declarations: [
-        TrangTruyenComponent
+        TrangTruyenComponent,
     ],
     imports: [
       CommonModule,
+      FormsModule,
+      ReactiveFormsModule,
       // BrowserModule, 
       RouterModule.forChild(routes)
     ],
